@@ -13,4 +13,4 @@ EXPOSE 4001/tcp
 VOLUME /data
 VOLUME /wal
 
-CMD ["/etcd", "--data-dir", "/data", "--wal-dir", "/wal"]
+CMD ["/etcd", "--data-dir", "/data", "--wal-dir", "/wal", "--listen-peer-urls", "http://0.0.0.0:2380", "--listen-client-urls", "http://0.0.0.0:2379"]
